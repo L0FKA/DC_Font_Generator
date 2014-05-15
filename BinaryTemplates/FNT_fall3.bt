@@ -1,0 +1,37 @@
+//--------------------------------------
+//--- 010 Editor v5.0 Binary Template
+//
+// File: FNT_fall3.bt
+// Author: L0FKA, DC Font Generator author.
+// Revision: 2
+//--------------------------------------
+typedef struct{
+    float iConstant_0;
+    float x1;
+    float y1;
+    float x2;
+    float y2;
+    float x3;
+    float y3;
+    float x4;
+    float y4;
+    float iCharViewWidth;
+    float iCharViewHeight;
+    float iLeftSpace;
+    float iRightSpace;
+    float iBottomAlign;
+}
+fnt_Char;
+
+struct FILE {
+    struct HEADER{
+        float iLineHeight;
+        int iConst_0;
+        int iConst_1;
+        char iTextFileName[284];
+    } header <bgcolor=cGray>;
+
+    struct FONT{
+        fnt_Char iCharList[256];
+    } font;
+} file;

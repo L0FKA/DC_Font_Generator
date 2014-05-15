@@ -1,0 +1,23 @@
+//--------------------------------------
+//--- 010 Editor v5.0 Binary Template
+//
+// File: Texture Fallout 3\NV file
+// Author: L0FKA, DC Font Generator author.
+// Revision: 1
+// Purpose:
+//--------------------------------------
+
+typedef struct
+{
+    ubyte R;
+    ubyte G;
+    ubyte B;
+    ubyte A;
+} PixelData;
+
+struct FILE
+{
+    long Width;
+    long Height;
+    PixelData pData[Width*Height];
+} file;

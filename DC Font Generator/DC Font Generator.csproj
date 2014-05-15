@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5B91D20-6B3B-4A93-BC00-819A1E0E684B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DC_Font_Generator</RootNamespace>
+    <AssemblyName>DC Font Generator</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.3.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="2DArray.cs" />
+    <Compile Include="DrawFont.cs" />
+    <Compile Include="Encoding.cs" />
+    <Compile Include="FL_FONT.cs" />
+    <Compile Include="Fnt_char.cs" />
+    <Compile Include="Fnt_Header.cs" />
+    <Compile Include="FontListSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FontListSelect.Designer.cs">
+      <DependentUpon>FontListSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="SettsFnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettsFnt.Designer.cs">
+      <DependentUpon>SettsFnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ini.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherClass.cs" />
+    <Compile Include="PictureBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepeatFilter.cs" />
+    <Compile Include="SplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="FontListSelect.resx">
+      <DependentUpon>FontListSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettsFnt.resx">
+      <DependentUpon>SettsFnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureBox.resx">
+      <DependentUpon>PictureBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\arrow_left_blue_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\arrow_right_blue_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\arrow_2_left_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\arrow_2_right_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon\accept_blue.png" />
+    <Content Include="icon\accept_green.png" />
+    <Content Include="icon\article.png" />
+    <Content Include="icon\article_text.png" />
+    <Content Include="icon\bar_graph.png" />
+    <Content Include="icon\burst.png" />
+    <Content Include="icon\calendar.png" />
+    <Content Include="icon\calendar2.png" />
+    <Content Include="icon\cancel_round.png" />
+    <Content Include="icon\clock.png" />
+    <Content Include="icon\code.png" />
+    <Content Include="icon\comment_blue.png" />
+    <Content Include="icon\dollar.png" />
+    <Content Include="icon\double_comment.png" />
+    <Content Include="icon\download.png" />
+    <Content Include="icon\envelope.png" />
+    <Content Include="icon\flag_black.png" />
+    <Content Include="icon\flag_blue.png" />
+    <Content Include="icon\flag_green.png" />
+    <Content Include="icon\flag_orange.png" />
+    <Content Include="icon\flag_red.png" />
+    <Content Include="icon\flag_yellow.png" />
+    <Content Include="icon\folder.png" />
+    <Content Include="icon\info.png" />
+    <Content Include="icon\link.png" />
+    <Content Include="icon\lock.png" />
+    <Content Include="icon\magnify.png" />
+    <Content Include="icon\minus_round.png" />
+    <Content Include="icon\money.png" />
+    <Content Include="icon\new.png" />
+    <Content Include="icon\pencil.png" />
+    <Content Include="icon\pictures.png" />
+    <Content Include="icon\printer.png" />
+    <Content Include="icon\question_blue.png" />
+    <Content Include="icon\refresh.png" />
+    <Content Include="icon\rss.png" />
+    <Content Include="icon\rss_round.png" />
+    <Content Include="icon\security_green.png" />
+    <Content Include="icon\security_orange.png" />
+    <Content Include="icon\security_red.png" />
+    <Content Include="icon\star.png" />
+    <Content Include="icon\star_blue.png" />
+    <Content Include="icon\stop.png" />
+    <Content Include="icon\stop_round.png" />
+    <Content Include="icon\upload.png" />
+    <Content Include="icon\world.png" />
+    <Content Include="icon\world2.png" />
+    <Content Include="icon\favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
